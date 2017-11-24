@@ -2,7 +2,7 @@
   "name": "7evenseconds",
   "version": "1.0.0", 
   "engines": {
-    "node": "6.11.1"
+    "node": "6.9.5"
   },
   "description": "",
   "main": "server.js",
