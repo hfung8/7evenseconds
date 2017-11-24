@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yianni's Landing Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+</head>
+
+<body>
+    <p style="font-family:Cormorant Garamond; text-align:center; font-size:25px; color:grey">
+        <strong>Project Seven Seconds</strong>
+    </p>
+    <br>
+    <p style="font-family:Cormorant Garamond; text-align:center; font-size:50px; color:grey">Research shows that it takes 7 seconds to get a first impression. Here are the stories
+        <em>behind</em> the story.</p>
+    <p id="aside" onmouseover="" style="cursor: pointer;float: right;"><u>Next Stories</u></p>
+    <div id="empty"></div>
+</body>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+$("#aside").click(function(event){
+    event.preventDefault();
+var queryURL = "https://www.google.com"
+$.ajax({
+    url:queryURL,
+    Method:"GET",
+    async:true
+})
+
+})
+
+
+
+</script>
+</html>
