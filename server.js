@@ -16,7 +16,7 @@ app.get("/index", function(req, res) {
     res.sendFile(path.join(__dirname, "../7evenseconds/views/index.html"));
   });
   
-app.listen(process.env.PORT || PORT, function() {
+app.listen(process.env.PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
 
