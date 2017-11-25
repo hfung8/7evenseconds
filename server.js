@@ -8,8 +8,10 @@ var PORT = 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "./views/landing.html"));
+app.use(express.static('public'));
+
+app.get("/landing", function(req, res) {
+    res.sendFile(path.join(__dirname, "./views/public/landing.html"));
   });
 
 // app.get("/index", function(req, res) {
