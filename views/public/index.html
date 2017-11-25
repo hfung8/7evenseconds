@@ -16,23 +16,11 @@
     <br>
     <p style="font-family:Cormorant Garamond; text-align:center; font-size:50px; color:grey">Research shows that it takes 7 seconds to get a first impression. Here are the stories
         <em>behind</em> the story.</p>
-    <p id="aside" onmouseover="" style="cursor: pointer;float: right;"><u>Next Stories</u></p>
+    <a id="aside" onmouseover="" style="cursor: pointer;float: right; color:black" href="/story"><u>Next Stories</u></a>
     <div id="empty"></div>
 </body>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script type="text/javascript">
-$("#aside").click(function(event){
-    event.preventDefault();
-var queryURL = "https://www.google.com"
-$.ajax({
-    url:queryURL,
-    Method:"GET",
-    async:true
-})
-
-})
-
-
 
 </script>
 </html>
