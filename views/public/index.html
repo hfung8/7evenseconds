@@ -16,11 +16,26 @@
     <br>
     <p style="font-family:Cormorant Garamond; text-align:center; font-size:50px; color:grey">Research shows that it takes 7 seconds to get a first impression. Here are the stories
         <em>behind</em> the story.</p>
-    <a id="aside" onmouseover="" style="cursor: pointer;float: right; color:black" href="/story"><u>Next Stories</u></a>
-    <div id="empty"></div>
+    <a id="aside" onmouseover="" style="cursor: pointer;float: right; color:black" href="/story">
+        <u>Next Stories</u>
+    </a>
+    <div id="newDiv" style="text-align: center">
+        <a href="/story">
+            <video id="video1" onmouseover="this.play()" style="height:100px; width:100px">
+                <source src="../../images/headshot.mp4" type="video/mp4">
+            </video>
+        </a>
+    </div>
 </body>
-<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script type="text/javascript">
+var video = document.createElement("video");
+video.src = ('../../images/headshot.mp4');
 
+var image2 = document.createElement("image");
+image2.src = ('../../images.headshot.jpg');
+
+$("#video1").onclick = video.play();
 </script>
+
 </html>
