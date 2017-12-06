@@ -10,9 +10,13 @@ app.use(bodyParser.json());
 
 app.use(express.static('views/public'));
 
-app.get("/story", function(req, res) {
-    res.sendFile(path.join(__dirname, "./views/public/story.html"));
+app.get("/story2", function(req, res) {
+    res.sendFile(path.join(__dirname, "./views/public/story2.html"));
   });
+
+app.get("/headshot", function(req,res) {
+	res.sendFile(path.join(__dirname, ".views/public/headshot.html"));
+})
 
 // app.get("/index", function(req, res) {
 //     res.sendFile(path.join(__dirname, "../7evenseconds/views/index.html"));
