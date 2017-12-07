@@ -10,6 +10,10 @@ app.use(bodyParser.json());
 
 app.use(express.static('views/public'));
 
+app.get("/about", function(req,res){
+	res.sendFile(path.join(__dirname, "./views/public/about.html"));
+});
+
 app.get("/story2", function(req, res) {
     res.sendFile(path.join(__dirname, "./views/public/story2.html"));
   });
