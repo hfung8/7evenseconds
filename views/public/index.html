@@ -7,23 +7,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Yianni's Landing Page</title>
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Barlow+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 
 <body>
     <p style="font-family:Barlow Condensed; text-align:center; font-size:30px; color:black">
         <strong>Project Seven Seconds</strong>
     </p>
-    <p style="font-family:EB Garamond; margin-left:250px; font-size:50px; color:grey">Research shows that it takes <em>7 seconds</em><br> to get a first impression. Here are the <br> stories
+    <p style="font-family:EB Garamond; margin-left:250px; font-size:50px; color:grey">Research shows that it takes <em>7 seconds</em>
+        <br> to get a first impression. Here are the
+        <br> stories
         <em>behind</em> the story.</p>
-    <a id="videoplayer" href="/story2">
-        <div>
-            <img src="headshot.jpg">
-            <video poster="headshot.jpg" id="video1" src="headshot.mp4" onmouseover="trythis()" style="height:200px; width:200px; margin-left:250px" type="video/mp4">
-            </video>
-         </div>
-    </a>
     <br>
-        <a id="about" onmouseover="" style="cursor: pointer;float: right; color:grey; font-family: EB Garamond" href="/about">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm" id="div1">
+                <video poster="headshot.jpg" id="video1" src="headshot.mp4" style="height:200px; width:200px; margin-left:250px" type="video/mp4" preload="none">
+                </video>
+            </div>
+            <div class="col-sm">2nd</div>
+            <div class="col-sm">3rd</div>
+        </div>
+    </div>
+    <br>
+    <a id="about" onmouseover="" style="cursor: pointer;float: right; color:grey; font-family: EB Garamond" href="/about">
         <u>About</u>
     </a>
     <br>
@@ -34,38 +41,37 @@
     <div id="trythis" onmouseover="letsdothis()"></div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-    var figure = $("#video1").hover( hoverVideo, hideVideo );
+<script type="text/javascript">
+var video = document.getElementById("video1");
+var image = document.createElement("img");
+image.src = "headshot.jpg";
 
-    function hoverVideo(e) {  
-    $('video1', this).get(0).play(); 
-}
+$("#video1").on('mouseenter', function() {
+    $("#video1").get(0).play();
+});
 
-    function hideVideo(e) {
-    $('video1', this).get(0).pause(); 
-}
+$("#video1").on('mouseout', function() {
+    image.setAttribute("style", "height:200px;width:200px")
+    video.setAttribute("style", "opacity:0;height:200px;width:200px");
+    $("#div1").append(image);
+    // $("#div1").append("<img src='headshot.jpg'>");
+});
 
-    function trythis() {
-        var video = document.getElementById("video1");
-        video.style.opacity = "0.5";
-        video.play();
-    }
-    // var image = document.createElement("img");
-    // image.setAttribute("src", "headshot.jpg");
+// var image = document.createElement("img");
+// image.setAttribute("src", "headshot.jpg");
 
-    // function trythis(){
-    //     var trythis = document.getElementById("trythis");
-    //     trythis.appendChild(image);
-    // }
-    // trythis();
+// function trythis(){
+//     var trythis = document.getElementById("trythis");
+//     trythis.appendChild(image);
+// }
+// trythis();
 
-    // function letsdothis(){
-    //     var video = document.createElement("video");
-    //     video.setAttribute("src", "headshot.mp4");
-    //     var trythis = document.getElementById("trythis");
-    //     trythis.replaceChild(video, image);
-    // }
-
-
+// function letsdothis(){
+//     var video = document.createElement("video");
+//     video.setAttribute("src", "headshot.mp4");
+//     var trythis = document.getElementById("trythis");
+//     trythis.replaceChild(video, image);
+// }
 </script>
+
 </html>
