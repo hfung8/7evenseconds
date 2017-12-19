@@ -19,14 +19,22 @@
         <br> stories
         <em>behind</em> the story.</p>
     <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm" id="div1">
-                <video poster="headshot.jpg" id="video1" src="headshot.mp4" style="height:200px; width:200px; margin-left:250px" type="video/mp4" preload="none">
+    <div class="container" style="width:1500px;height:500px">
+        <div class="row" style="width:750px;height:500px">
+            <a href="/story2">
+            <div class="col-sm" id="div1" style="width:250px;height:250px">
+                <video poster="headshot.jpg" id="video1" src="headshot.mp4" style="height:200px; width:200px" type="video/mp4" preload="none" loop onmouseenter="tryThis(1)">
                 </video>
             </div>
-            <div class="col-sm">2nd</div>
-            <div class="col-sm">3rd</div>
+            </a>
+            <div class="col-sm" id="div2" style="width:250px;height:250px">
+                <video poster="headshot.jpg" id="video2" src="headshot.mp4" style="height:200px; width:200px" type="video/mp4" preload="none" loop onmouseenter="tryThis(2)">
+                </video>
+            </div>
+            <div class="col-sm" id="div3" style="width:250px;height:250px">
+                <video poster="headshot.jpg" id="video3" src="headshot.mp4" style="height:200px; width:200px" type="video/mp4" preload="none" loop onmouseenter="tryThis(3)">
+                </video>
+            </div>
         </div>
     </div>
     <br>
@@ -38,7 +46,6 @@
         <u>Next Stories</u>
     </a>
     <br>
-    <div id="trythis" onmouseover="letsdothis()"></div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
@@ -46,31 +53,18 @@ var video = document.getElementById("video1");
 var image = document.createElement("img");
 image.src = "headshot.jpg";
 
-$("#video1").on('mouseenter', function() {
-    $("#video1").get(0).play();
-});
+function tryThis(arg) {
+    var video = document.getElementById("video" + arg);
+    video.play()
+};
 
-$("#video1").on('mouseout', function() {
-    image.setAttribute("style", "height:200px;width:200px;margin-left:250px");
-    video.setAttribute("style", "opacity:0;height:200px;width:200px;");
-    $("#div1").prepend(image);
-});
+// function tryAgain(arg) {
+//     // image.setAttribute("style", "height:200px;width:200px;margin-left:250px");
+//     // video.setAttribute("style", "opacity:0;height:200px;width:200px;");
+//     var div = document.getElementById("div" + arg);
+//     div.replaceChild(image, video);
+// };
 
-// var image = document.createElement("img");
-// image.setAttribute("src", "headshot.jpg");
-
-// function trythis(){
-//     var trythis = document.getElementById("trythis");
-//     trythis.appendChild(image);
-// }
-// trythis();
-
-// function letsdothis(){
-//     var video = document.createElement("video");
-//     video.setAttribute("src", "headshot.mp4");
-//     var trythis = document.getElementById("trythis");
-//     trythis.replaceChild(video, image);
-// }
 </script>
 
 </html>
