@@ -9,46 +9,38 @@
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Barlow+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <iframe src="https://sevensecondsapp.herokuapp.com/" allow="autoplay"></iframe>
     <script type="text/javascript">
-        // var video = document.getElementById("video1");
-    // var image = document.createElement("img");
-    // image.src = "headshot.jpg";
-
-    // document.getElementsByTagName("video").addEventListener("mousenter", tryThis());
-
-    function tryThis(arg){
-    var video = document.getElementById("video" + arg).play();
-        if (video !== undefined){
-            video.then(function(){
-                console.log("playback works!")
-            }).catch(function(error){
-                console.log("promise rejected");
-                console.log(error)
-            })
-        }
+    function tryOne(){
+        var video = document.getElementsByTagName("video")[0].play();
     }
 
+    function tryTwo(){
+        var video = document.getElementsByTagName("video")[1].play();
+    }
 
-    // function tryThis(arg){
-    //     var video = document.getElementById("video" + arg);
-    //     // video.load();
-    //     setTimeout(function(){
-    //         video.play();
-    //     }, 0); 
-    // }
-    
-    // function tryThis(arg) {
-    //     var video = document.getElementById("video" + arg);
-    //     video.play()
-    // };
-    
-    // function tryAgain(arg) {
-    //     // image.setAttribute("style", "height:200px;width:200px;margin-left:250px");
-    //     // video.setAttribute("style", "opacity:0;height:200px;width:200px;");
-    //     var div = document.getElementById("div" + arg);
-    //     div.replaceChild(image, video);
-    // };
+    function tryThree(){
+        var video = document.getElementsByTagName("video")[2].play();
+    }
+
+    function tryFour(){
+        var video = document.getElementsByTagName("video")[3].play();
+    }
+
+    function tryFive(){
+        var video = document.getElementsByTagName("video")[4].play();
+    }
+
+    function trySix(){
+        var video = document.getElementsByTagName("video")[5].play();
+    }
+
+    function trySeven(){
+        var video = document.getElementsByTagName("video")[6].play();
+    }
+
+    function tryEight(){
+        var video = document.getElementsByTagName("video")[7].play();
+    }
     </script>
 </head>
 
@@ -65,38 +57,38 @@
         <div class="row">
             <a href="/story2">
                 <div class="col-sm" id="div1" style="width:250px;height:250px;margin-left:43px">
-                    <video id="video1" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryThis(1)">
+                    <video id="video1" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryOne()">
                     </video>
                 </div>
             </a>
             <div class="col-sm" id="div2" style="width:250px;height:250px;margin-left:24px">
-                <video id="video2" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryThis(2)">
+                <video id="video2" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryTwo()">
                 </video>
             </div>
             <div class="col-sm" id="div3" style="width:250px;height:250px">
-                <video id="video3" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryThis(3)">
+                <video id="video3" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryThree()">
                 </video>
             </div>
             <div class="col-sm" id="div4" style="width:250px;height:250px">
-                <video id="video4" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryThis(4)">
+                <video id="video4" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryFour()">
                 </video>
             </div>
         </div>
         <div class="row">
             <div class="col-sm" id="div5" style="width:250px;height:250px;margin-left:43px">
-                <video id="video5" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryThis(5)">
+                <video id="video5" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryFive()">
                 </video>
             </div>
             <div class="col-sm" id="div6" style="width:250px;height:250px">
-                <video id="video6" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryThis(6)">
+                <video id="video6" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="trySix()">
                 </video>
             </div>
             <div class="col-sm" id="div7" style="width:250px;height:250px">
-                <video id="video7" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryThis(7)">
+                <video id="video7" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="trySeven()">
                 </video>
             </div>
             <div class="col-sm" id="div8" style="width:250px;height:250px">
-                <video id="video8" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryThis(8)">
+                <video id="video8" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryEight()">
                 </video>
             </div>
         </div>
