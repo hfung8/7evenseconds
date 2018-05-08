@@ -8,6 +8,36 @@
     <title>Yianni's Landing Page</title>
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Barlow+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        
+        // var video = document.getElementById("video1");
+    // var image = document.createElement("img");
+    // image.src = "headshot.jpg";
+    
+    // function tryThis(){
+    //     var video = document.getElementsByClassName("video");
+    //     video.src = "videoheadshot.mp4";
+    //     setTimeout(function(){
+    //         video.play()
+    //     }, 0); 
+    // }
+    
+    function tryThis(arg) {
+        var video = document.getElementById("video" + arg);
+        video.play()
+    };
+    })
+    
+    // function tryAgain(arg) {
+    //     // image.setAttribute("style", "height:200px;width:200px;margin-left:250px");
+    //     // video.setAttribute("style", "opacity:0;height:200px;width:200px;");
+    //     var div = document.getElementById("div" + arg);
+    //     div.replaceChild(image, video);
+    // };
+    </script>
+    
 </head>
 
 <body>
@@ -70,34 +100,6 @@
     </a>
     <br>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-    
-    // var video = document.getElementById("video1");
-// var image = document.createElement("img");
-// image.src = "headshot.jpg";
 
-// function tryThis(){
-//     var video = document.getElementsByClassName("video");
-//     video.src = "videoheadshot.mp4";
-//     setTimeout(function(){
-//         video.play()
-//     }, 0); 
-// }
-
-function tryThis(arg) {
-    var video = document.getElementById("video" + arg);
-    video.play()
-};
-})
-
-// function tryAgain(arg) {
-//     // image.setAttribute("style", "height:200px;width:200px;margin-left:250px");
-//     // video.setAttribute("style", "opacity:0;height:200px;width:200px;");
-//     var div = document.getElementById("div" + arg);
-//     div.replaceChild(image, video);
-// };
-</script>
 </body>
 </html>
