@@ -15,18 +15,18 @@
     // var image = document.createElement("img");
     // image.src = "headshot.jpg";
     
-    // function tryThis(){
-    //     var video = document.getElementsByClassName("video");
-    //     video.src = "videoheadshot.mp4";
-    //     setTimeout(function(){
-    //         video.play()
-    //     }, 0); 
-    // }
-    
-    function tryThis(arg) {
+    function tryThis(arg){
         var video = document.getElementById("video" + arg);
-        video.play()
-    };
+        video.load();
+        setTimeout(function(){
+            video.play();
+        }, 0); 
+    }
+    
+    // function tryThis(arg) {
+    //     var video = document.getElementById("video" + arg);
+    //     video.play()
+    // };
     
     // function tryAgain(arg) {
     //     // image.setAttribute("style", "height:200px;width:200px;margin-left:250px");
@@ -50,38 +50,38 @@
         <div class="row">
             <a href="/story2">
                 <div class="col-sm" id="div1" style="width:250px;height:250px;margin-left:43px">
-                    <video class="video" id="video1" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryThis(1)">
+                    <video class="video" id="video1" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" preload="none" onmouseenter="tryThis(1)">
                     </video>
                 </div>
             </a>
             <div class="col-sm" id="div2" style="width:250px;height:250px;margin-left:24px">
-                <video class="video" id="video2" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryThis(2)">
+                <video class="video" id="video2" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" preload="none" onmouseenter="tryThis(2)">
                 </video>
             </div>
             <div class="col-sm" id="div3" style="width:250px;height:250px">
-                <video class="video" id="video3" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryThis(3)">
+                <video class="video" id="video3" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" preload="none" onmouseenter="tryThis(3)">
                 </video>
             </div>
             <div class="col-sm" id="div4" style="width:250px;height:250px">
-                <video class="video" id="video4" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryThis(4)">
+                <video class="video" id="video4" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" preload="none" onmouseenter="tryThis(4)">
                 </video>
             </div>
         </div>
         <div class="row">
             <div class="col-sm" id="div5" style="width:250px;height:250px;margin-left:43px">
-                <video class="video" id="video5" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryThis(5)">
+                <video class="video" id="video5" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" preload="none" onmouseenter="tryThis(5)">
                 </video>
             </div>
             <div class="col-sm" id="div6" style="width:250px;height:250px">
-                <video class="video" id="video6" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryThis(6)">
+                <video class="video" id="video6" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" preload="none" onmouseenter="tryThis(6)">
                 </video>
             </div>
             <div class="col-sm" id="div7" style="width:250px;height:250px">
-                <video class="video" id="video7" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryThis(7)">
+                <video class="video" id="video7" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" preload="none" onmouseenter="tryThis(7)">
                 </video>
             </div>
             <div class="col-sm" id="div8" style="width:250px;height:250px">
-                <video class="video" id="video8" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" onmouseenter="tryThis(8)">
+                <video class="video" id="video8" src="videoheadshot.mp4" style="height:200px; width:200px" type="video/mp4" preload="none" onmouseenter="tryThis(8)">
                 </video>
             </div>
         </div>
