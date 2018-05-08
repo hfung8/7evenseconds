@@ -72,7 +72,9 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
-// var video = document.getElementById("video1");
+$(document).ready(function(){
+    
+    // var video = document.getElementById("video1");
 // var image = document.createElement("img");
 // image.src = "headshot.jpg";
 
@@ -88,6 +90,7 @@ function tryThis(arg) {
     var video = document.getElementById("video" + arg);
     video.play()
 };
+})
 
 // function tryAgain(arg) {
 //     // image.setAttribute("style", "height:200px;width:200px;margin-left:250px");
